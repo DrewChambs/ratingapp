@@ -1,0 +1,171 @@
+/* 
+------ Font family -----
+
+Family: [Overpass](https://fonts.google.com/specimen/Overpass)
+*
+*/
+/* GENERIC GLOBAL STYLES **********/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* CUSTOM PROPERTIES *********************/
+:root {
+  --mainBl: steelblue;
+}
+/* END CUSTOM PROPERTIES *****************/
+body {
+  background-color: #000;
+  font-family: "Overpass", sans-serif;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2 {
+  margin: 0;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+/***********************************/
+/***********************************/
+/***********************************/
+.rating_app__container {
+  display: grid;
+  place-items: center;
+  width: 60%;
+  margin: 0 auto;
+  padding: 5em 0;
+}
+.app_holder {
+  margin-top: 7em;
+  background-color: hsl(218, 11%, 14%);
+  padding: 3em 2em 2em 2em;
+  border-radius: 25px;
+  width: 500px;
+  max-width: 500px;
+  /* height: 500px; */
+}
+.app_title {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+}
+.app_intro {
+  color: hsl(217, 12%, 63%);
+  width: 90%;
+  margin: 2em 0;
+  font-size: 0.9rem;
+}
+.btn_holder {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.app_logo {
+  background-color: rgb(49, 44, 44);
+  padding: 1em;
+  border-radius: 50%;
+  margin-bottom: 2em;
+}
+.color_check {
+  /* height: 200px; */
+  background-color: hsl(217, 12%, 63%);
+}
+.app_holder-selection {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(220, 6%, 20%);
+  padding: 0.5em 0;
+  border-radius: 20px;
+  width: 250px;
+}
+.app_thank-you {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.app_marbottom {
+  margin-bottom: 2em;
+}
+.app_holder-thankyou {
+  margin-top: 7em;
+  background-color: hsl(218, 11%, 14%);
+  padding: 3em 2em 2em 2em;
+  border-radius: 25px;
+  /* width: 500px; */
+  max-width: 500px;
+  /* height: 500px; */
+}
+.thanks-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/******************************/
+/* BUTTONS  3/24/22 *************/
+/******************************/
+.btnSubmit {
+  width: 100%;
+  border-radius: 100px;
+  text-transform: uppercase;
+  border: none;
+  /* background-color: orange; */
+  background-color: hsl(25, 97%, 53%);
+  color: #fff;
+  padding: 1em 0;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 250ms;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.btnSubmit:hover {
+  background-color: rgb(233, 229, 221);
+  color: hsl(25, 97%, 53%);
+}
+.btnNumbers {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(220, 5%, 23%);
+  color: hsl(217, 12%, 63%);
+  cursor: pointer;
+}
+.btnNumbers:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+.btnNumbers:focus {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(216, 12%, 54%);
+  opacity: 1;
+}
+/* END BUTTONS  ***********/
+
+/* Below From Frontend Mentor Styles */
+.attribution {
+  padding: 5em 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
