@@ -1,6 +1,6 @@
 /* 
 ------ Font family -----
-
+font-family: 'Poppins', sans-serif;
 Family: [Overpass](https://fonts.google.com/specimen/Overpass)
 *
 */
@@ -38,18 +38,36 @@ h1,
 h2 {
   margin: 0;
 }
-.container {
+/* .container {
   width: 80%;
   margin: 0 auto;
   max-width: 1100px;
+} */
+/***********************************/
+/***********************************/
+/******* Sections 3/25/22 ********/
+/* .rating_main {
+  height: 0;
+  overflow: hidden;
+} */
+.thanks_main {
+  height: 0;
+  overflow: hidden;
 }
-/***********************************/
-/***********************************/
-/***********************************/
+/*  VISIBILITY OF APPS */
+.show-thanks {
+  height: auto;
+}
+.show-rating {
+  height: 0;
+  overflow: hidden;
+}
+/******* End Sections  ***********/
+
 .rating_app__container {
   display: grid;
   place-items: center;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   padding: 5em 0;
 }
@@ -58,9 +76,9 @@ h2 {
   background-color: hsl(218, 11%, 14%);
   padding: 3em 2em 2em 2em;
   border-radius: 25px;
-  width: 500px;
+  /* width: 500px; */
   max-width: 500px;
-  /* height: 500px; */
+  height: 500px;
 }
 .app_title {
   color: hsl(0, 0%, 100%);
@@ -126,7 +144,6 @@ h2 {
   border-radius: 100px;
   text-transform: uppercase;
   border: none;
-  /* background-color: orange; */
   background-color: hsl(25, 97%, 53%);
   color: #fff;
   padding: 1em 0;
@@ -159,13 +176,22 @@ h2 {
   opacity: 1;
 }
 /* END BUTTONS  ***********/
-
-/* Below From Frontend Mentor Styles */
-.attribution {
-  padding: 5em 0;
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+@media (max-width: 375px) {
+  .btnNumbers {
+    width: 40px;
+    height: 40px;
+  }
+  .btnSubmit {
+    width: 100%;
+    padding: 1em 0;
+    font-size: 1em;
+    letter-spacing: 2px;
+  }
+  .app_holder {
+    padding: 1em;
+    max-width: 300px;
+  }
+  .app_title {
+    font-size: 1.5rem;
+  }
 }
