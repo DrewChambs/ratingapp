@@ -176,6 +176,14 @@ h2 {
   opacity: 1;
 }
 /* END BUTTONS  ***********/
+/* From Frontend Mentor */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 @media (max-width: 375px) {
   .btnNumbers {
     width: 40px;
