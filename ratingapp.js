@@ -10,6 +10,8 @@ const thankYou = document.querySelector(".app_holder-selection");
 const thanksContainer = document.querySelector(".thanks_main");
 // Link to main rating container
 const ratingContainer = document.querySelector(".rating_main");
+// Link to close button
+const closeThanks = document.querySelector(".close_thanks");
 
 btnNum.forEach(item => {
   item.addEventListener("click", e => {
@@ -20,8 +22,16 @@ btnNum.forEach(item => {
     rateArray.push(rating);
     btnSubmit.addEventListener("click", () => {
       thankYou.innerHTML = `You selected ${rating} out of 5`;
+      // Add classes to hide main screen and show thank you screen
       thanksContainer.classList.add("show-thanks");
       ratingContainer.classList.add("show-rating");
     });
   });
+});
+// Add Event Listener to close button
+closeThanks.addEventListener("click", () => {
+  console.log("Close bvtton clicked!");
+  // Remove classes to show main app screen
+  thanksContainer.classList.remove("show-thanks");
+  ratingContainer.classList.remove("show-rating");
 });

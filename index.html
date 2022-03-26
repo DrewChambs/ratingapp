@@ -17,71 +17,75 @@
 
     <!-- Style link -->
     <link rel="stylesheet" href="ratingapp.css" />
+    <!-- Font Awesome Kit -->
+    <script
+      src="https://kit.fontawesome.com/8d254938cf.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- JS Link -->
     <script src="ratingapp.js" defer></script>
   </head>
   <body>
     <section class="rating_main">
-      <div class="container">
-        <!-- <div class="rating_app"> -->
-        <div class="rating_app__container">
-          <div class="app_holder">
-            <img
-              src="images/icon-star.svg"
-              alt="Star image logo"
-              class="app_logo"
-            />
-            <h2 class="app_title">How did we do?</h2>
-            <p class="app_intro">
-              Please let us know how we did with your support request. All
-              feedback is apprecitated to help us improve our offering!
-            </p>
-            <div class="btn_holder">
-              <button class="btnNumbers" type="button" data-id="1">1</button>
-              <button class="btnNumbers" type="button" data-id="2">2</button>
-              <button class="btnNumbers" type="button" data-id="3">3</button>
-              <button class="btnNumbers" type="button" data-id="4">4</button>
-              <button class="btnNumbers" type="button" data-id="5">5</button>
-            </div>
-            <button class="btnSubmit" type="button" data-id="submit">
-              submit
-            </button>
+      <div class="rating__container">
+        <div class="app_holder">
+          <img
+            src="images/icon-star.svg"
+            alt="Star image logo"
+            class="app_logo"
+          />
+          <h2 class="app_title">How did we do?</h2>
+          <p class="app_intro">
+            Please let us know how we did with your support request. All
+            feedback is apprecitated to help us improve our offering!
+          </p>
+          <div class="btn_holder">
+            <button class="btnNumbers" type="button" data-id="1">1</button>
+            <button class="btnNumbers" type="button" data-id="2">2</button>
+            <button class="btnNumbers" type="button" data-id="3">3</button>
+            <button class="btnNumbers" type="button" data-id="4">4</button>
+            <button class="btnNumbers" type="button" data-id="5">5</button>
           </div>
+          <button class="btnSubmit" type="button" data-id="submit">
+            submit
+          </button>
         </div>
-        <!-- </div> -->
       </div>
     </section>
     <section class="thanks_main">
-      <div class="container">
-        <div class="rating_app__container">
-          <div class="app_thank-you">
-            <div class="app_holder-thankyou">
-              <img
-                src="images/illustration-thank-you.svg"
-                alt="Thank you display"
-                class="img_thank-you app_marbottom"
-              />
-              <div class="thanks-center">
-                <p class="app_holder-selection app_marbottom">
-                  You selected 4 out of 5
-                </p>
-                <h2 class="app_title">Thank you!</h2>
-                <p class="app_intro">
-                  We appreciate you taking the time to give a rating. If you
-                  ever need more support, don't hesitate to get in touch!
-                </p>
-              </div>
+      <!-- <div class="container"> -->
+      <div class="rating__container">
+        <div class="app_thank-you">
+          <div class="app_holder-thankyou">
+            <p class="close_thanks">close</p>
+            <img
+              src="images/illustration-thank-you.svg"
+              alt="Thank you display"
+              class="img_thank-you app_marbottom"
+            />
+            <div class="thanks-center">
+              <p class="app_holder-selection app_marbottom">
+                You selected 4 out of 5
+              </p>
+              <h2 class="app_title">Thank you!</h2>
+              <p class="app_intro">
+                We appreciate you taking the time to give a rating. If you ever
+                need more support, don't hesitate to get in touch!
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
+    <!------------ FROM Frontend Mentor ------------->
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Andrew Chambers</a>.
+      >
+      <p class="coded-by">Coded by</p>
+      <a href="#">Andrew Chambers</a>.
     </div>
   </body>
 </html>

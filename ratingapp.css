@@ -20,6 +20,7 @@ Family: [Overpass](https://fonts.google.com/specimen/Overpass)
 body {
   background-color: #000;
   font-family: "Overpass", sans-serif;
+  font-size: 0.9375rem;
   letter-spacing: 1.6px;
   line-height: 1.5;
 }
@@ -50,21 +51,23 @@ h2 {
   height: 0;
   overflow: hidden;
 } */
+/* Hide thank you screen by default */
 .thanks_main {
   height: 0;
   overflow: hidden;
 }
-/*  VISIBILITY OF APPS */
+/*  Show thank you screen */
 .show-thanks {
   height: auto;
 }
+/* Hide main rating screen */
 .show-rating {
   height: 0;
   overflow: hidden;
 }
 /******* End Sections  ***********/
 
-.rating_app__container {
+.rating__container {
   display: grid;
   place-items: center;
   width: 100%;
@@ -90,21 +93,14 @@ h2 {
   margin: 2em 0;
   font-size: 0.9rem;
 }
-.btn_holder {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2em;
-}
+
 .app_logo {
   background-color: rgb(49, 44, 44);
   padding: 1em;
   border-radius: 50%;
   margin-bottom: 2em;
 }
-.color_check {
-  /* height: 200px; */
-  background-color: hsl(217, 12%, 63%);
-}
+
 .app_holder-selection {
   color: hsl(25, 97%, 53%);
   background-color: hsl(220, 6%, 20%);
@@ -125,9 +121,7 @@ h2 {
   background-color: hsl(218, 11%, 14%);
   padding: 3em 2em 2em 2em;
   border-radius: 25px;
-  /* width: 500px; */
   max-width: 500px;
-  /* height: 500px; */
 }
 .thanks-center {
   display: flex;
@@ -139,6 +133,11 @@ h2 {
 /******************************/
 /* BUTTONS  3/24/22 *************/
 /******************************/
+.btn_holder {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
 .btnSubmit {
   width: 100%;
   border-radius: 100px;
@@ -175,13 +174,38 @@ h2 {
   background-color: hsl(216, 12%, 54%);
   opacity: 1;
 }
+.close_thanks {
+  font-size: 1rem;
+  color: #fff;
+  text-align: right;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: ease-in-out 250ms;
+}
+.close_thanks:hover {
+  color: orange;
+  transform: scaleY(1.1);
+}
 /* END BUTTONS  ***********/
 /* From Frontend Mentor */
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding-bottom: 6em;
+  line-height: 2;
 }
 .attribution a {
+  display: block;
+  color: hsl(228, 45%, 44%);
+  margin-bottom: 1em;
+}
+
+/* Mine below */
+.attribution a,
+.attribution p {
+  margin-bottom: 1em;
+}
+.coded-by {
   color: hsl(228, 45%, 44%);
 }
 @media (max-width: 375px) {
@@ -197,6 +221,9 @@ h2 {
   }
   .app_holder {
     padding: 1em;
+    max-width: 300px;
+  }
+  .app_thank-you {
     max-width: 300px;
   }
   .app_title {
