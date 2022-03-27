@@ -3,79 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Mentor | Interactive rating component</title>
-
+    <title>Frontend Mentor Rating Application</title>
+    <!-- Favicon  -->
     <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
     />
 
     <!------------------ Google Font Links ------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.google.com/specimen/Overpass" />
 
     <!-- Style link -->
     <link rel="stylesheet" href="ratingapp.css" />
-    <!-- Font Awesome Kit -->
-    <script
-      src="https://kit.fontawesome.com/8d254938cf.js"
-      crossorigin="anonymous"
-    ></script>
 
     <!-- JS Link -->
     <script src="ratingapp.js" defer></script>
   </head>
   <body>
-    <section class="rating_main">
-      <div class="rating__container">
-        <div class="app_holder">
-          <img
-            src="images/icon-star.svg"
-            alt="Star image logo"
-            class="app_logo"
-          />
-          <h2 class="app_title">How did we do?</h2>
-          <p class="app_intro">
-            Please let us know how we did with your support request. All
-            feedback is apprecitated to help us improve our offering!
-          </p>
-          <div class="btn_holder">
-            <button class="btnNumbers" type="button" data-id="1">1</button>
-            <button class="btnNumbers" type="button" data-id="2">2</button>
-            <button class="btnNumbers" type="button" data-id="3">3</button>
-            <button class="btnNumbers" type="button" data-id="4">4</button>
-            <button class="btnNumbers" type="button" data-id="5">5</button>
-          </div>
-          <button class="btnSubmit" type="button" data-id="submit">
-            submit
-          </button>
+    <section class="rating-app-container">
+      <div class="app">
+        <img
+          src="images/icon-star.svg"
+          alt="Rating App Logo"
+          class="app__img"
+        />
+        <h2 class="app__title">How did we do?</h2>
+        <p class="app__text">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <div class="app__btnHolder">
+          <button class="btnNumbers" data-id="1">1</button>
+          <button class="btnNumbers" data-id="2">2</button>
+          <button class="btnNumbers" data-id="3">3</button>
+          <button class="btnNumbers" data-id="4">4</button>
+          <button class="btnNumbers" data-id="5">5</button>
         </div>
+        <button class="btnSubmit">Submit</button>
       </div>
     </section>
-    <section class="thanks_main">
-      <!-- <div class="container"> -->
-      <div class="rating__container">
-        <div class="app_thank-you">
-          <div class="app_holder-thankyou">
-            <p class="close_thanks">close</p>
-            <img
-              src="images/illustration-thank-you.svg"
-              alt="Thank you display"
-              class="img_thank-you app_marbottom"
-            />
-            <div class="thanks-center">
-              <p class="app_holder-selection app_marbottom">
-                You selected 4 out of 5
-              </p>
-              <h2 class="app_title">Thank you!</h2>
-              <p class="app_intro">
-                We appreciate you taking the time to give a rating. If you ever
-                need more support, don't hesitate to get in touch!
-              </p>
-            </div>
-          </div>
-        </div>
+    <section class="rating-app-thanks">
+      <div class="app align-center">
+        <p class="app__close">Close</p>
+        <img
+          src="images/illustration-thank-you.svg"
+          alt="Thank you logo"
+          class="app__img-thanks"
+        />
+        <p class="app__thanks-selection">You selected 4 out of 5</p>
+        <h2 class="app__thanks-title">Thank you!</h2>
+        <p class="app__thanks-text">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
       </div>
     </section>
     <!------------ FROM Frontend Mentor ------------->

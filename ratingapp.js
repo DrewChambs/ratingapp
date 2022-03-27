@@ -1,37 +1,40 @@
-// March 24, 2022
-
-// Select Numbers buttons
-const btnNum = document.querySelectorAll(".btnNumbers");
-// Submit button link
+// March 26, 2022
+// Rating refactored
+// Link to buttons
 const btnSubmit = document.querySelector(".btnSubmit");
-// Link to display rating choice
-const thankYou = document.querySelector(".app_holder-selection");
-// Link to thanks container
-const thanksContainer = document.querySelector(".thanks_main");
-// Link to main rating container
-const ratingContainer = document.querySelector(".rating_main");
+// Link to all numbers buttons
+const btnNumbers = document.querySelectorAll(".btnNumbers");
+// Link to rating selection
+const ratingDisplay = document.querySelector(".app__thanks-selection");
+// Link to thank you display
+const thanksDisplay = document.querySelector(".rating-app-thanks");
+// Link to main rating app display
+const ratingAppContainer = document.querySelector(".rating-app-container");
 // Link to close button
-const closeThanks = document.querySelector(".close_thanks");
+const closeBtn = document.querySelector(".app__close");
 
-btnNum.forEach(item => {
-  item.addEventListener("click", e => {
-    // console.log(e.currentTarget.dataset.id);
-    const rateArray = [];
-
+btnNumbers.forEach(number => {
+  // Add event listener numbers nodelist
+  number.addEventListener("click", e => {
     let rating = e.currentTarget.dataset.id;
-    rateArray.push(rating);
+    console.log(rating);
     btnSubmit.addEventListener("click", () => {
-      thankYou.innerHTML = `You selected ${rating} out of 5`;
-      // Add classes to hide main screen and show thank you screen
-      thanksContainer.classList.add("show-thanks");
-      ratingContainer.classList.add("show-rating");
+      // Display selection in window
+      ratingDisplay.innerHTML = `You selected ${rating} out of 5`;
+      // Display thank you window
+      thanksDisplay.classList.add("show-thanks");
+      ratingAppContainer.classList.add("hide-rating-app");
     });
   });
 });
-// Add Event Listener to close button
-closeThanks.addEventListener("click", () => {
-  console.log("Close bvtton clicked!");
-  // Remove classes to show main app screen
-  thanksContainer.classList.remove("show-thanks");
-  ratingContainer.classList.remove("show-rating");
+
+// Add event listener to close button
+// to return to appp intro display
+closeBtn.addEventListener("click", () => {
+  // Display thank you window
+  thanksDisplay.classList.remove("show-thanks");
+  ratingAppContainer.classList.remove("hide-rating-app");
 });
+// btnSubmit.addEventListener("click", () => {
+//   console.log("Button was clicked!");
+// });

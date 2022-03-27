@@ -1,9 +1,9 @@
-/* 
------- Font family -----
-font-family: 'Poppins', sans-serif;
-Family: [Overpass](https://fonts.google.com/specimen/Overpass)
-*
-*/
+/*
+      ------ Font family -----
+      font-family: 'Poppins', sans-serif;
+      Family: [Overpass](https://fonts.google.com/specimen/Overpass)
+      *
+      */
 /* GENERIC GLOBAL STYLES **********/
 *,
 *::before,
@@ -15,12 +15,24 @@ Family: [Overpass](https://fonts.google.com/specimen/Overpass)
 /* CUSTOM PROPERTIES *********************/
 :root {
   --mainBl: steelblue;
+  --bgDrk: hsl(216, 12%, 8%);
+  --clrOrange: hsl(25, 97%, 53%);
+  --clrWte: hsl(0, 0%, 100%);
+  --bRad: 20px;
+  --bRadLogo: 50%;
+  --midGray: hsl(216, 12%, 54%);
+  --ltGray: hsl(217, 12%, 63%);
+  --dkGray: hsl(218, 11%, 14%);
+  --mgN: 1em;
+  --mgNLG: 1.5em;
+  --trans: ease-in-out 200ms;
 }
 /* END CUSTOM PROPERTIES *****************/
 body {
-  background-color: #000;
-  font-family: "Overpass", sans-serif;
+  /* background-color: #000; */
+  background-color: var(--bgDrk);
   font-size: 0.9375rem;
+  font-family: "Overpass", sans-serif;
   letter-spacing: 1.6px;
   line-height: 1.5;
 }
@@ -39,154 +51,124 @@ h1,
 h2 {
   margin: 0;
 }
-/* .container {
-  width: 80%;
-  margin: 0 auto;
-  max-width: 1100px;
-} */
-/***********************************/
-/***********************************/
-/******* Sections 3/25/22 ********/
-/* .rating_main {
-  height: 0;
-  overflow: hidden;
-} */
-/* Hide thank you screen by default */
-.thanks_main {
+/* ******* Main Body *************** */
+.app {
+  width: 290px;
+  height: 500px;
+  background-color: var(--dkGray);
+  border-radius: var(--bRad);
+  padding: 3em 2em;
+}
+.app__img {
+  border-radius: var(--bRad);
+  background-color: hsl(220, 5%, 23%);
+  padding: 0.5em;
+}
+
+.rating-app-container {
+  display: grid;
+  place-items: center;
+  padding-top: 5em;
+}
+/* Show and hide thank you display */
+/* Initially hide thank you by default */
+.rating-app-thanks {
+  display: grid;
+  place-items: center;
+  /* padding-top: 3em; */
   height: 0;
   overflow: hidden;
 }
-/*  Show thank you screen */
+
+/* Show thank you display */
 .show-thanks {
   height: auto;
 }
-/* Hide main rating screen */
-.show-rating {
+/* Hide main window */
+.hide-rating-app {
   height: 0;
   overflow: hidden;
 }
-/******* End Sections  ***********/
-
-.rating__container {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 5em 0;
-}
-.app_holder {
-  margin-top: 7em;
-  background-color: hsl(218, 11%, 14%);
-  padding: 3em 2em 2em 2em;
-  border-radius: 25px;
-  /* width: 500px; */
-  max-width: 500px;
-  height: 500px;
-}
-.app_title {
-  color: hsl(0, 0%, 100%);
-  font-size: 2rem;
-}
-.app_intro {
-  color: hsl(217, 12%, 63%);
-  width: 90%;
+/* BUTTONS **********/
+.app__btnHolder {
   margin: 2em 0;
-  font-size: 0.9rem;
-}
-
-.app_logo {
-  background-color: rgb(49, 44, 44);
-  padding: 1em;
-  border-radius: 50%;
-  margin-bottom: 2em;
-}
-
-.app_holder-selection {
-  color: hsl(25, 97%, 53%);
-  background-color: hsl(220, 6%, 20%);
-  padding: 0.5em 0;
-  border-radius: 20px;
-  width: 250px;
-}
-.app_thank-you {
-  display: grid;
-  place-items: center;
-  text-align: center;
-}
-.app_marbottom {
-  margin-bottom: 2em;
-}
-.app_holder-thankyou {
-  margin-top: 7em;
-  background-color: hsl(218, 11%, 14%);
-  padding: 3em 2em 2em 2em;
-  border-radius: 25px;
-  max-width: 500px;
-}
-.thanks-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-/******************************/
-/* BUTTONS  3/24/22 *************/
-/******************************/
-.btn_holder {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2em;
+}
+.btnNumbers,
+.btnSubmit {
+  border: none;
+  color: var(--ltGray);
+  cursor: pointer;
+}
+.btnNumbers {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: hsl(220, 5%, 23%);
+}
+.btnNumbers:hover {
+  background-color: var(--clrOrange);
+}
+.btnNumbers:focus {
+  color: var(--clrWte);
+  background-color: var(--midGray);
 }
 .btnSubmit {
   width: 100%;
-  border-radius: 100px;
+  background-color: var(--clrOrange);
   text-transform: uppercase;
-  border: none;
-  background-color: hsl(25, 97%, 53%);
-  color: #fff;
+  border-radius: var(--bRad);
   padding: 1em 0;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: 250ms;
-  font-weight: 700;
+  color: var(--clrWte);
   letter-spacing: 2px;
 }
 .btnSubmit:hover {
-  background-color: rgb(233, 229, 221);
-  color: hsl(25, 97%, 53%);
+  background-color: var(--clrWte);
+  color: rgb(199, 117, 87);
 }
-.btnNumbers {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: none;
-  background-color: hsl(220, 5%, 23%);
-  color: hsl(217, 12%, 63%);
-  cursor: pointer;
-}
-.btnNumbers:hover {
-  background-color: hsl(25, 97%, 53%);
-  color: hsl(0, 0%, 100%);
-}
-.btnNumbers:focus {
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(216, 12%, 54%);
-  opacity: 1;
-}
-.close_thanks {
-  font-size: 1rem;
-  color: #fff;
+.app__close {
+  color: var(--clrWte);
   text-align: right;
   cursor: pointer;
-  text-transform: capitalize;
-  transition: ease-in-out 250ms;
 }
-.close_thanks:hover {
-  color: orange;
-  transform: scaleY(1.1);
+/* ***************** */
+/* Typography */
+.app__title {
+  color: var(--clrWte);
 }
-/* END BUTTONS  ***********/
+.app__text {
+  color: var(--ltGray);
+}
+.app__thanks-text {
+  color: var(--ltGray);
+}
+/* Utility Margin */
+.app__img,
+.app__title,
+.app__text {
+  margin-bottom: var(--mgN);
+}
+.app__img-thanks,
+.app__thanks-title,
+.app__thanks-text,
+.app__thanks-selection {
+  margin-bottom: var(--mgNLG);
+}
+.app__thanks-title {
+  color: var(--clrWte);
+}
+.app__thanks-selection {
+  color: var(--clrOrange);
+  border-radius: var(--bRad);
+  padding: 0.5em 0;
+  background-color: hsl(225, 4%, 18%);
+}
+.align-center {
+  text-align: center;
+}
+/* End Typography */
+
 /* From Frontend Mentor */
 .attribution {
   font-size: 11px;
@@ -199,7 +181,6 @@ h2 {
   color: hsl(228, 45%, 44%);
   margin-bottom: 1em;
 }
-
 /* Mine below */
 .attribution a,
 .attribution p {
@@ -208,25 +189,17 @@ h2 {
 .coded-by {
   color: hsl(228, 45%, 44%);
 }
-@media (max-width: 375px) {
+@media (min-width: 700px) {
+  .rating-app-container {
+    display: grid;
+    place-items: center;
+    /* padding-top: 5em; */
+  }
+  .app {
+    width: 400px;
+  }
   .btnNumbers {
-    width: 40px;
-    height: 40px;
-  }
-  .btnSubmit {
-    width: 100%;
-    padding: 1em 0;
-    font-size: 1em;
-    letter-spacing: 2px;
-  }
-  .app_holder {
-    padding: 1em;
-    max-width: 300px;
-  }
-  .app_thank-you {
-    max-width: 300px;
-  }
-  .app_title {
-    font-size: 1.5rem;
+    height: 60px;
+    width: 60px;
   }
 }
