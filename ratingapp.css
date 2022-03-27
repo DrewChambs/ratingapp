@@ -176,7 +176,8 @@ h2 {
   padding-bottom: 6em;
   line-height: 2;
 }
-.attribution a {
+.attribution a,
+.attribution p {
   display: block;
   color: hsl(228, 45%, 44%);
   margin-bottom: 1em;
@@ -184,7 +185,7 @@ h2 {
 /* Mine below */
 .attribution a,
 .attribution p {
-  margin-bottom: 1em;
+  margin: 1.5em 0;
 }
 .coded-by {
   color: hsl(228, 45%, 44%);
