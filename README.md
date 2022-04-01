@@ -8,16 +8,15 @@ Frontend Mentor rating application
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot]- Located in images folder
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-- [Author] - Andrew Chambers
--
+- Overview
+- The challenge
+- Screenshot- Located in images folder
+- Links
+- My process
+- Built with
+- What I learned
+- Continued development
+- Author - Andrew Chambers
 
 ## Overview
 
