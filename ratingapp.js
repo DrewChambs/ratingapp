@@ -16,13 +16,15 @@ const closeBtn = document.querySelector(".app__close");
 btnNumbers.forEach(number => {
   // Add event listener numbers nodelist
   number.addEventListener("click", e => {
+    // Capture selected rating
     let rating = e.currentTarget.dataset.id;
-    console.log(rating);
+    // Change display based on selection
     btnSubmit.addEventListener("click", () => {
       // Display selection in window
       ratingDisplay.innerHTML = `You selected ${rating} out of 5`;
       // Display thank you window
       thanksDisplay.classList.add("show-thanks");
+      // Hide main app screen
       ratingAppContainer.classList.add("hide-rating-app");
     });
   });
@@ -31,10 +33,8 @@ btnNumbers.forEach(number => {
 // Add event listener to close button
 // to return to appp intro display
 closeBtn.addEventListener("click", () => {
-  // Display thank you window
+  // Close thank you window
   thanksDisplay.classList.remove("show-thanks");
+  // Display main screen
   ratingAppContainer.classList.remove("hide-rating-app");
 });
-// btnSubmit.addEventListener("click", () => {
-//   console.log("Button was clicked!");
-// });

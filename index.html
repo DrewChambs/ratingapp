@@ -21,45 +21,50 @@
     <link rel="preconnect" href="https://fonts.google.com/specimen/Overpass" />
 
     <!-- Style link -->
-    <link rel="stylesheet" href="ratingapp.css" />
-
-    <!-- JS Link -->
-    <script src="ratingapp.js" defer></script>
+    <link rel="stylesheet" href="css/ratingapp.css" />
   </head>
   <body>
+    <!-- Main Rating App Container -->
     <section class="rating-app-container">
       <div class="app">
         <img
           src="images/icon-star.svg"
           alt="Rating App Logo"
-          class="app__img"
+          class="app__img app_margin-bottom"
         />
-        <h2 class="app__title">How did we do?</h2>
-        <p class="app__text">
+        <h2 class="app__title app__margin-bottom">How did we do?</h2>
+        <p class="app__text app__margin-bottom">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
+        <!-- Rating Number Container -->
         <div class="app__btnHolder">
+          <!-- Rating Buttons -->
           <button class="btnNumbers" data-id="1">1</button>
           <button class="btnNumbers" data-id="2">2</button>
           <button class="btnNumbers" data-id="3">3</button>
           <button class="btnNumbers" data-id="4">4</button>
           <button class="btnNumbers" data-id="5">5</button>
         </div>
+        <!-- Submit Button -->
         <button class="btnSubmit">Submit</button>
       </div>
     </section>
+    <!-- Thank you Container -->
     <section class="rating-app-thanks">
       <div class="app align-center">
         <p class="app__close">Close</p>
+        <!-- Thank you image -->
         <img
           src="images/illustration-thank-you.svg"
           alt="Thank you logo"
-          class="app__img-thanks"
+          class="app__img-thanks app__margin-large"
         />
-        <p class="app__thanks-selection">You selected 4 out of 5</p>
-        <h2 class="app__thanks-title">Thank you!</h2>
-        <p class="app__thanks-text">
+        <p class="app__thanks-selection app__margin-large">
+          You selected 4 out of 5
+        </p>
+        <h2 class="app__thanks-title app__margin-large">Thank you!</h2>
+        <p class="app__thanks-text app__margin-large">
           We appreciate you taking the time to give a rating. If you ever need
           more support, don't hesitate to get in touch!
         </p>
@@ -74,5 +79,7 @@
       <p class="coded-by">Coded by</p>
       <a href="#">Andrew Chambers</a>.
     </div>
+    <!-- JS Link -->
+    <script src="ratingapp.js"></script>
   </body>
 </html>

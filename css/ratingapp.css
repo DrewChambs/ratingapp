@@ -4,7 +4,7 @@
       Family: [Overpass](https://fonts.google.com/specimen/Overpass)
       *
       */
-/* GENERIC GLOBAL STYLES **********/
+/* RESET **********/
 *,
 *::before,
 *::after {
@@ -12,7 +12,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* CUSTOM PROPERTIES *********************/
+/* CUSTOM PROPERTIES *********/
 :root {
   --mainBl: steelblue;
   --bgDrk: hsl(216, 12%, 8%);
@@ -27,9 +27,9 @@
   --mgNLG: 1.5em;
   --trans: ease-in-out 200ms;
 }
-/* END CUSTOM PROPERTIES *****************/
+/* END CUSTOM PROPERTIES *******/
+/* GLOBAL STYLES ***************/
 body {
-  /* background-color: #000; */
   background-color: var(--bgDrk);
   font-size: 0.9375rem;
   font-family: "Overpass", sans-serif;
@@ -51,7 +51,26 @@ h1,
 h2 {
   margin: 0;
 }
-/* ******* Main Body *************** */
+/*  END GLOBAL STYLES ************/
+/*********** UTILITES ***********/
+/* Utility Margin */
+.app__margin-bottom {
+  margin-bottom: var(--mgN);
+}
+.app__margin-large {
+  margin-bottom: var(--mgNLG);
+}
+/* Utility to center-align contents */
+.align-center {
+  text-align: center;
+}
+/*********** END UTILITES *********/
+/* *** Main Body Application ******/
+.rating-app-container {
+  display: grid;
+  place-items: center;
+  padding-top: 3em;
+}
 .app {
   width: 290px;
   height: 500px;
@@ -64,22 +83,13 @@ h2 {
   background-color: hsl(220, 5%, 23%);
   padding: 0.5em;
 }
-
-.rating-app-container {
-  display: grid;
-  place-items: center;
-  padding-top: 5em;
-}
-/* Show and hide thank you display */
-/* Initially hide thank you by default */
+/* Hide thank you display by default */
 .rating-app-thanks {
   display: grid;
   place-items: center;
-  /* padding-top: 3em; */
   height: 0;
   overflow: hidden;
 }
-
 /* Show thank you display */
 .show-thanks {
   height: auto;
@@ -132,8 +142,8 @@ h2 {
   text-align: right;
   cursor: pointer;
 }
-/* ***************** */
-/* Typography */
+/**** END BUTTONS **************/
+/**** Typography ***************/
 .app__title {
   color: var(--clrWte);
 }
@@ -143,18 +153,7 @@ h2 {
 .app__thanks-text {
   color: var(--ltGray);
 }
-/* Utility Margin */
-.app__img,
-.app__title,
-.app__text {
-  margin-bottom: var(--mgN);
-}
-.app__img-thanks,
-.app__thanks-title,
-.app__thanks-text,
-.app__thanks-selection {
-  margin-bottom: var(--mgNLG);
-}
+
 .app__thanks-title {
   color: var(--clrWte);
 }
@@ -164,12 +163,9 @@ h2 {
   padding: 0.5em 0;
   background-color: hsl(225, 4%, 18%);
 }
-.align-center {
-  text-align: center;
-}
-/* End Typography */
+/* End Typography ***************/
 
-/* From Frontend Mentor */
+/* Styles From Frontend Mentor **/
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -182,7 +178,7 @@ h2 {
   color: hsl(228, 45%, 44%);
   margin-bottom: 1em;
 }
-/* Mine below */
+/* My Additions ******************/
 .attribution a,
 .attribution p {
   margin: 1.5em 0;
@@ -191,11 +187,6 @@ h2 {
   color: hsl(228, 45%, 44%);
 }
 @media (min-width: 700px) {
-  .rating-app-container {
-    display: grid;
-    place-items: center;
-    /* padding-top: 5em; */
-  }
   .app {
     width: 400px;
   }
