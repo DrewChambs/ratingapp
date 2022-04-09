@@ -109,7 +109,7 @@ as a normal disappearing/thank you screen upon user selection.
 
 ### Continued development
 
-I think more projects moving forward is the way to go for me. This was an excellent excercise to gauge where I was
+I think more projects moving forward is the way to go for me. This was an excellent exercise to gauge where I was
 in my JavaScript learning process. Repetition is the key from where I am now. I've discovered that I know a good few things about
 the core HTML, CSS, and JavaScript, and the next step is the application of everything I've learned so far.
 I do need to focus on more advanced topics within JavaScript, and a good way to start that process is to look into
